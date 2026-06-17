@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #08030a;
+  color: white;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { height: 8px; width: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 999px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,.05); }
+
+.glass {
+  background: rgba(10, 4, 14, 0.72);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.hero-gradient {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(229,9,79,.38), transparent 30%),
+    radial-gradient(circle at 75% 15%, rgba(255,77,136,.22), transparent 35%),
+    linear-gradient(180deg, rgba(8,3,10,.35), #08030a 88%);
+}
+
+.masonry { column-count: 1; column-gap: 1rem; }
+@media (min-width: 640px) { .masonry { column-count: 2; } }
+@media (min-width: 1024px) { .masonry { column-count: 3; } }
+.masonry-item { break-inside: avoid; margin-bottom: 1rem; }
